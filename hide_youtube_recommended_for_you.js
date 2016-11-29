@@ -9,7 +9,7 @@
 // ==/UserScript==
 !(function() {
   window.setTimeout(function check() {
-    console.log("DEBUG");
+    //console.log("DEBUG");
     if (document.getElementsByClassName('stat view-count')) {
       main();
     }
@@ -19,9 +19,9 @@
   function main() {
     var a = document.getElementsByClassName('stat view-count');
     for(var i = 0, len = a.length; i < len; i++) {
-      console.log("DEBUG RECOMMENDED FOR YOU" + a[i].textContent);
+      //console.log("DEBUG RECOMMENDED FOR YOU" + a[i].textContent);
       if (a[i].innerHTML.indexOf("Recommended") != -1) {
-        console.log("DEBUG elemnts recommneded found");
+        console.log("DEBUG elements recommended found for hide");
         a[i].parentNode.parentNode.parentNode.style.display = 'none';
       }
     }
